@@ -7,17 +7,10 @@ You also need to download the [Adafruit MCP4725 12-bit I2C DAC Driver library](h
 On the hardware, you need to plug the MCP4725 DAC to the arduino using an I2C connexion (2 wires).
 You can search the web for more info about I2C connexions.
 
-For the software, you will need to find the address of the DAC using an [I2C scanner](http://playground.arduino.cc/Main/I2cScanner "I2C scanner") and replace the value 'dac.begin(0x60);' with the right address.
+For the software, you will need to find the address of the DAC using an [I2C scanner](http://playground.arduino.cc/Main/I2cScanner "I2C scanner") and replace the value `dac.begin(0x60);` with the right address.
 
 ## Output
 The drop voltage is printed on the serial monitor of the arduino IDE.
-
-## Limitation
-The voltage drop is limited to 5V. 
-An op amp with a external power supply can handle this limitation, on the DAC output.
-
-## TODO
-Multiple diodes could be handled in parallel (for the fun)...
 
 # How it works?
 You need to place the DAC output on the + of the diode. 
@@ -38,6 +31,15 @@ The voltage across the diode is the difference between the DAC and the A0.
 
 Diode Voltage = DACval/4096.*5. - A0val/1024.*5.
 
+# Comments
+## Limitation
+The voltage drop is limited to 5V. 
+An op amp with a external power supply can handle this limitation, on the DAC output.
+
+## TODO
+* Multiple diodes could be handled in parallel (for the fun)...
+* Simplified version
+* quick version
 
 ELB - 08/2017 
 
