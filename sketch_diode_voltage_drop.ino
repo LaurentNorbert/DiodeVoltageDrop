@@ -37,7 +37,7 @@ void setup(void) {
   // For MCP4725A2 the address is 0x64 or 0x65
   dac.begin(0x60);
   checkVoltage = true; // init - compute voltage drop in loop
-  sensorThres = 20; // minmum value for diode on (voltage = sensorThres/1024.*5.)
+  sensorThres = 20; // minimum value for diode on (voltage = sensorThres/1024.*5.)
   Serial.println("Detecting diode voltage drop");
   
   // on board led
