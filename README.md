@@ -35,6 +35,7 @@ The DAC has values between 0 and 4095, the analog input has values between 0 and
 The 0 corresponds to 0 Volt and the max values correspond to 5V.
 
 The voltage across the diode is the difference between the DAC and the A0.
+
 Diode Voltage = DACval/4096.*5. - A0val/1024.*5.
 
 
