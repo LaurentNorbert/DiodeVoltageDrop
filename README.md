@@ -20,11 +20,11 @@ An op amp with a external power supply can handle this limitation, on the DAC ou
 Multiple diodes could be handled in parallel (for the fun)...
 
 # How it works?
-You need to place the DAC output to the + of the diode. 
+You need to place the DAC output on the + of the diode. 
 The - of the diode is linked to the ground via a resistor (1K Ohms). 
 The - of the diode is also linked to the analog input A0.
 
-If the DAC voltage is too low, the diode is blocked and A0 at the ground.
+If the DAC voltage is too low, the diode is blocked and A0 is at the ground.
 The DAC voltage is increased slowly, until the A0 voltage is above a small constant.
 Then the voltage difference is the voltage drop of the component.
 
@@ -32,7 +32,7 @@ VdacOut -- diode -- (resistor -- ground, V A0)
 
 ## Measurement of the voltage drop
 The DAC has values between 0 and 4095, the analog input has values between 0 and 1023.
-The 0 corresponds to 0 volts and the max value corresponds to 5V.
+The 0 corresponds to 0 Volt and the max values correspond to 5V.
 
 The voltage across the diode is the difference between the DAC and the A0.
 Diode Voltage = DACval/4096.*5. - A0val/1024.*5.
