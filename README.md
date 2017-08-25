@@ -22,6 +22,7 @@ The DAC voltage is increased slowly, until the A0 voltage is above a small const
 Then the voltage difference is the voltage drop of the component.
 
 VdacOut -- diode -- (resistor -- ground, V A0) 
+![Schematic](http://elaurent.benaroya.free.fr/github/diodeVoltageDrop/diode_voltage_drop.png "Schematic")
 
 ## Measurement of the voltage drop
 The DAC has values between 0 and 4095, the analog input has values between 0 and 1023.
